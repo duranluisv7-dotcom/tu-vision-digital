@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import { ShoppingCart, CheckCircle, Truck, ShieldCheck } from "lucide-react";
 import AddToCartButton from "./AddToCartButton";
 
-export default async function ProductDetailPage({ params }: { params: { id: string } }) {
-    const { id } = params;
+export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
 
     const { data: product } = await supabase
         .from('productos')
