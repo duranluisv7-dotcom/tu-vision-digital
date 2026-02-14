@@ -8,7 +8,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         <LanguageProvider>
             <PayPalScriptProvider
                 options={{
-                    "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "test",
+                    clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "test",
                     currency: "USD"
                 }}
             >
