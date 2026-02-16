@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { ShoppingCart, CheckCircle, Truck, ShieldCheck } from "lucide-react";
 import AddToCartButton from "./AddToCartButton";
 
+export const dynamic = 'force-dynamic';
+
 export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
 

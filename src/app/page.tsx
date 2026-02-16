@@ -3,6 +3,8 @@ import { ArrowRight, ShoppingBag, Eye, Focus } from "lucide-react";
 import ProductList from "@/components/productos/ProductList";
 import { supabase } from "@/lib/supabase";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   // Fetch real products from Supabase
   const { data: products } = await supabase
